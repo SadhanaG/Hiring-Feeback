@@ -15,13 +15,13 @@ SETUP
 -----
 To set up the project in local machine, you have to follow these steps.
 * //Clone the project
-* $git clone git@github.com:SadhanaG/Hiring-Feeback.git
+`$git clone git@github.com:SadhanaG/Hiring-Feeback.git`
 * //check files which are need to add
-* $ git status
+`$ git status`
 * //add the files to the stage
-* $ git add <file name>
+`$ git add <file name>`
 * //commit the project
-* $ git commit
+`$ git commit`
 * //add to the remote
-* $ git origin master
+`$ git origin master`
 
