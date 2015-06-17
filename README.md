@@ -14,14 +14,19 @@ Javascript files are placed in js folder.
 SETUP
 -----
 To set up the project in local machine, you have to follow these steps.
-* //Clone the project
+* Clone the project
+
 `$git clone git@github.com:SadhanaG/Hiring-Feeback.git`
-* //check files which are need to add
+* Check files which are need to add
+
 `$ git status`
-* //add the files to the stage
+* Add the files to the stage
+
 `$ git add <file name>`
-* //commit the project
+* Commit the project
+
 `$ git commit`
-* //add to the remote
+* Add to the remote
+
 `$ git origin master`
 
