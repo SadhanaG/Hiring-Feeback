@@ -9,11 +9,11 @@ Heading
 
 Emphasis
 ----
-..* Hello **World**
-..* Hello *World*
-..* Hello __World__
-..* Hello _World_
-..* Hello ~~World~~
+  * Hello **World**
+  * Hello *World*
+  * Hello __World__
+  * Hello _World_
+  * Hello ~~World~~
 
 table
 -----
@@ -28,6 +28,8 @@ List
   1. Hello World
 3. Hello World
 ..* Hello World
+
+
   * Hello World
   + Hello World
   - Hello World
