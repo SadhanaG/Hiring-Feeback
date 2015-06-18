@@ -70,15 +70,12 @@ Blockquotes
 Horizontal line
 ---------------
 
-* `---`
 ---
-* `***`
 ***
-* `___` 
 ___
 
 
 Video
 -----
 
-* [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+* [![IMAGE ALT TEXT HERE](https://github.com/SadhanaG/Hiring-Feeback/blob/master/image/logo_s.png)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
