@@ -9,11 +9,11 @@ Heading
 
 Emphasis
 ----
-* Hello **World**
-* Hello *World*
-* Hello __World__
-* Hello _World_
-* Hello ~~World~~
+--* Hello **World**
+--* Hello *World*
+--* Hello __World__
+--* Hello _World_
+--* Hello ~~World~~
 
 table
 -----
