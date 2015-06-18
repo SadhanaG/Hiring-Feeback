@@ -2,7 +2,7 @@
 /* CSS Document */
 body{
 	font: Verdana;
-	font-size: 16px;	
+	font-size: 16px;
 }
 .u1{width:100%;}
 .u2{width: 98%;}
@@ -11,17 +11,16 @@ body{
 .u5{width: 50%;}
 .u6{width: 48%;}
 .u7{width: 33.3%;}
-.u8{width: 30%;}
+.u8{width: 30%; height: 100%;}
 
 input[type=text]{
 	width: 99.8%;
 	height: 100%;
 	border:none;
-	color: #ff0000;
 }
 input[type=submit]{
 	padding: 2% 5%;
-	font-size: 18px;	
+	font-size: 18px;
 }
 select{
 	width: 50%;
@@ -37,7 +36,7 @@ ul{
 ul li {
 	position: relative;
 	display: inline;
-	
+
 }
 
 .date_s{

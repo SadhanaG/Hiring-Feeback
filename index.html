@@ -9,7 +9,7 @@
 
 <body>
 <header>
-<form id="int_form" method="post" name="interview_ass-sheet">
+<form id="int_form" method="post" name="int_form">
 	<div class="u5 float_left">
 		<img src="image/logo_s.png" />
     </div>
@@ -27,17 +27,17 @@
                     </tr>
                     <tr>
                       <td><b>Position Applied for</b></td>
-                      <td><input name="c_position" type="text" placeholder="Enter Position Applied for"/></td>
+                      <td><input name="c_position" type="text" required autofocus placeholder="Enter Position Applied for"/></td>
                     </tr>
                     <tr>
                       <td><b>Technology / Skill Set</b></td>
-                      <td><input name="c_tech_skill" type="text" placeholder="Enter Name Technology / Skill Set"/></td>
+                      <td><input name="c_tech_skill" type="text" required autofocus placeholder="Enter Name Technology / Skill Set"/></td>
                     </tr>
                     <tr>
                       <td><label>Rounds</label></td>
                       <td>
                       	<div class="u3 float_left">
-                      	<select name="sel_round">
+                      	<select name="sel_round" required autofocus>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -46,15 +46,15 @@
                         </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_round_remark" placeholder="Remarks"/>
-                        </div> 
+                        	<input type="text" id="txt_round_remark" required autofocus placeholder="Remarks"/>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td><label>Panel</label></td>
                       <td>
                       	<div class="u3 float_left">
-                            <select name="sel_panel">
+                            <select name="sel_panel" required autofocus>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -63,8 +63,8 @@
                             </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_panel_remark"  placeholder="Remarks" />
-                        </div> 
+                        	<input type="text" id="txt_panel_remark" required autofocus  placeholder="Remarks" />
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -78,7 +78,7 @@
                       <td>Communication Skills</td>
                       <td>
                       	<div class="u3 float_left">
-                      	<select name="sel_com_skill">
+                      	<select name="sel_com_skill" required autofocus>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -87,15 +87,15 @@
                         </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_com_skill_remark"  placeholder="Remarks"/>
-                        </div> 
+                        	<input type="text" id="txt_com_skill_remark" required autofocus  placeholder="Remarks"/>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td>Interpersonal Skills</td>
                       <td>
                       	<div class="u3 float_left">
-                      	<select name="sel_int_skill">
+                      	<select name="sel_int_skill" required autofocus>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -104,15 +104,15 @@
                         </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_int_skill_remark"  placeholder="Remarks"/>
-                        </div> 
+                        	<input type="text" id="txt_int_skill_remark" required autofocus  placeholder="Remarks"/>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td>Leadership Skills</td>
                       <td>
                       	<div class="u3 float_left">
-                      	<select name="sel_lead_skill">
+                      	<select name="sel_lead_skill" required autofocus>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -121,15 +121,15 @@
                         </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_lead_skill_remark"  placeholder="Remarks"/>
-                        </div> 
+                        	<input type="text" id="txt_lead_skill_remark" required autofocus  placeholder="Remarks"/>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td>Team Management</td>
                       <td>
                       	<div class="u3 float_left">
-                      	<select name="sel_team">
+                      	<select name="sel_team" required autofocus>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -138,15 +138,15 @@
                         </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_team_remark"  placeholder="Remarks"/>
-                        </div> 
+                        	<input type="text" id="txt_team_remark" required autofocus  placeholder="Remarks"/>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td colspan="2" style="text-align:center;"><b>Technical Skills</b></td>
                     </tr>
                     <tr>
-                      <td><input type="text" id="txt_tech_one"  placeholder="Enter your's Technical Skills"/></td>
+                      <td><input type="text" id="txt_tech_one" required autofocus  placeholder="Enter your's Technical Skills"/></td>
                       <td>
                       	<div class="u3 float_left">
                       	<select name="sel_round">
@@ -158,8 +158,8 @@
                         </select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_tech_one_remark"  placeholder="Remarks"/>
-                        </div> 
+                        	<input type="text" id="txt_tech_one_remark" required autofocus placeholder="Remarks"/>
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -176,7 +176,7 @@
                         </div>
                         <div class="u8 float_left">
                         	<input type="text" id="txt_tech_one_remark"  placeholder="Remarks"/>
-                        </div> 
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -193,7 +193,7 @@
                         </div>
                         <div class="u8 float_left">
                         	<input type="text" id="txt_tech_three_remark"  placeholder="Remarks"/>
-                        </div> 
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -210,7 +210,7 @@
                         </div>
                         <div class="u8 float_left">
                         	<input type="text" id="txt_tech_four_remark"  placeholder="Remarks"/>
-                        </div> 
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -226,7 +226,7 @@
                         	</select>
                         </div>
                         <div class="u8 float_left">
-                        	<input type="text" id="txt_overall_remark"  placeholder="Remarks"/>
+                        	<input type="text" id="txt_overall_remark" required autofocus placeholder="Remarks"/>
                         </div>
                       </td>
                     </tr>

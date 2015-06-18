@@ -12,7 +12,7 @@ function validateForm()
     var c_pos = document.int_form.c_position;
     var c_tech = document.int_form.c_tech_skill;
     var c_round = document.int_form.sel_round;
-		var c_round_re = document.int_form.txt_round_remark;
+		var c_round_re = document.int_form.r_radio;
 
 
     if (c_name.value == "")
