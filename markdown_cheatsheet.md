@@ -37,11 +37,20 @@ List
 Link
 ----
 * [Google](http://www.google.co.in)
-* Go to [Google]: http://www.google.co.in
+* Go to [Google]
+[Google]: http://www.google.co.in
 
 Image
 -----
 * Insert image
  ![alt text](https://github.com/SadhanaG/Hiring-Feeback/blob/master/image/logo_s.png)
 
-* (https://github.com/SadhanaG/Hiring-Feeback/blob/master/image/logo_s.png) 
+Code
+----
+
+1. ```javascript
+  var a = "Hello World";
+  alert(a);
+  ```
+
+2. Code `Hello World`
