@@ -62,5 +62,14 @@ Code
 
 
 Blockquotes
-***********
-> Welcom to Hello World!
+-----------
+> Welcome to Hello World!
+  > Hello World
+
+
+Horizontal line
+---------------
+
+---
+***
+___
