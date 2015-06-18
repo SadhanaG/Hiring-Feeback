@@ -1,14 +1,14 @@
 Hiring Feedback Form
 --------------------
 
-It's an Interview Assessment Sheet where various fields e.g. Candidate name, Position applied for, Technology/ Skill set are given. On that bases candidate is going to be rated and hired.
+It's an --Interview Assessment Sheet-- where various fields e.g. -Candidate name, Position applied for, Technology/ Skill- set are given. On that bases candidate is going to be rated and hired.
 
 Project Description
 -------------------
-index.html is the landing page, where the hiring feedback form is built.
-Css file is name as "stylesheet.css" located in css folder.
+-index.html- is the landing page, where the hiring feedback form is built.
+Css file is name as -stylesheet.css- located in css folder.
 Images are placed in image folder.
-Javascript files are placed in js folder.
+Javascript file are placed in js folder.
 
 
 SETUP
