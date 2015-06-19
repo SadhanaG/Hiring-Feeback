@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>Hiring Feedback</title>
-<link rel="stylesheet" href="css/stylesheet.css"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--<link rel="stylesheet" href="css/stylesheet.css"/> -->
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
@@ -18,249 +21,299 @@
 </head>
 
 <body>
-<header>
-<form id="int_form" method="post" name="interview_ass-sheet">
-	<div class="u5 float_left">
-		<img src="image/logo_s.png" />
-    </div>
-    <div class="u5 float_left">
-    	<div><h3>Interview Assessment Sheet</h3></div>
-        <div><label>Date: </label><input class="date_s" type="date" id="txt_date" /></div>
-    </div>
-</header>
-<div>
-        	<table width="90%" border="1" cellpadding="0" cellspacing="0">
-                  <tbody>
-                    <tr>
-                      <td width="50%"><b>Candidate Name</b></td>
-                      <td width="50%"><input id="txt_c_name" name="c_name" type="text" required autofocus placeholder="Enter Name"/></td>
-                    </tr>
-                    <tr>
-                      <td><b>Position Applied for</b></td>
-                      <td><input name="c_position" type="text" placeholder="Enter Position Applied for"/></td>
-                    </tr>
-                    <tr>
-                      <td><b>Technology / Skill Set</b></td>
-                      <td><input name="c_tech_skill" type="text" placeholder="Enter Name Technology / Skill Set"/></td>
-                    </tr>
-                    <tr>
-                      <td><label>Rounds</label></td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_round">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
+<div class="container">
+	  <form class="form-horizontal" role="form">
+      	<div class="form-group text-center">
+        	<div class="col-sm-6">
+	         	<img src="image/logo_s.png"  class="img-responsive"/>
+             </div>
+             <div class="col-sm-2">
+                   <label class="text-left col-sm-12" for="email"><strong>Interview Assessment Sheet</strong></label>
+              </div>
+              <div class="col-sm-4">
+              		<div class="row">
+                        <div class='col-sm-12'>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_round_remark" placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>Panel</label></td>
-                      <td>
-                      	<div class="u3 float_left">
-                            <select name="sel_panel">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                            </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_panel_remark"  placeholder="Remarks" />
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><b>Assessment Parameters</b></td>
-                      <td>
-                      	<div class="u5 float_left"><b>Rating (1-5) <br> 1-Low, 5-High</b></div>
-                        <div class="u5 float_left"><b>Remark</b></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Communication Skills</td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_com_skill">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_com_skill_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Interpersonal Skills</td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_int_skill">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_int_skill_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Leadership Skills</td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_lead_skill">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_lead_skill_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Team Management</td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_team">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_team_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="text-align:center;"><b>Technical Skills</b></td>
-                    </tr>
-                    <tr>
-                      <td><input type="text" id="txt_tech_one"  placeholder="Enter your's Technical Skills"/></td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_round">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_tech_one_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><input type="text" id="txt_tech_two" placeholder="Enter your's Technical Skills"/></td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_round">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_tech_one_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><input type="text" id="txt_tech_three" placeholder="Enter your's Technical Skills"/></td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_round">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_tech_three_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><input type="text" id="txt_four_one" placeholder="Enter your's Technical Skills"/></td>
-                      <td>
-                      	<div class="u3 float_left">
-                      	<select name="sel_round">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        </select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_tech_four_remark"  placeholder="Remarks"/>
-                        </div> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Overall Rating</td>
-                      <td>
-                      	<div class="u3 float_left">
-                        	<select name="sel_rate">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                        	</select>
-                        </div>
-                        <div class="u8 float_left">
-                        	<input type="text" id="txt_overall_remark"  placeholder="Remarks"/>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="43">
-                      	<div class="u5 float_left" style="text-align:left;">
-                        	<label><b>Recommendation</b></label>
-                        </div>
-                        <div class="u5 float_left">
-                        	<label>II Round</label>
-                        </div>
-                      </td>
-                      <td>
-                      	<div class="u7 float_left"><input type="radio" value="sel" name="r_radio"/><label>Selected</label></div>
-                        <div class="u7 float_left"><input type="radio" value="rej" name="r_radio"/><label>Rejected</label></div>
-                        <div class="u7 float_left"><input type="radio" value="hold" name="r_radio"/><label>On Hold</label></div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-            	<div class="submit">
-                	<input type="submit" value="Send" id="btnSubmit">
-                </div>
-        </form>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#datetimepicker1').datetimepicker();
+                            });
+                        </script>
+                    </div>
+              </div>
+	    </div>
+      	<hr>
+	    <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Candidate name</strong></label>
+	      </div>
+	      <div class="col-sm-6">
+	          <input type="password" class="form-control" id="c_name" placeholder="Enter candidate name">
+	      </div>
+	    </div>
+        
+	    <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Position appiled for</strong></label>
+	      </div>
+	      <div class="col-sm-6">
+	        <input type="text" class="form-control" id="c_position" placeholder="Enter password">
+	      </div>
+	    </div>'
+        
+		<div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Technology/ Skill set</strong></label>
+	      </div>
+	      <div class="col-sm-6">
+	          <input type="password" class="form-control" id="c_name" placeholder="Enter candidate name">
+	      </div>
+	    </div>
+        
+	    <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Round</strong></label>
+	      </div>
+          <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="c_round_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+		<div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Panel</strong></label>
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="c_round_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group text-center">
+        	<div class="col-sm-6">
+	         <label class="text-left col-sm-12" for="email"><strong>Assessment Parameters</strong></label>
+             </div>
+             <div class="col-sm-2">
+                   <label class="text-left col-sm-12" for="email"><strong>Rating (1-5) <br>1-Low, 5-High</strong></label>
+              </div>
+              <div class="col-sm-4">
+                    <label class="text-left col-sm-12" for="email"><strong>Remarks</strong></label>
+              </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Communication Skills</strong></label>
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_2_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Interpersonal Skills</strong></label>
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_2_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Leadership Skills</strong></label>
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_3_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email"><strong>Team Management</strong></label>
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_4_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+	    <div class="form-group text-center">
+        	<label class="text-center col-sm-12" for="email"><strong>Technical Skills</strong></label>
+        </div>
+        
+        
+		<div class="form-group">
+	      <div class="col-sm-6">
+	          <input type="text" class="form-control" id="skill_1" placeholder="Skills 1">
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_1_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <input type="text" class="form-control" id="skill_2" placeholder="Skills 2">
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_2_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <input type="text" class="form-control" id="skill_3" placeholder="Skills">
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_3_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <input type="text" class="form-control" id="skill_4" placeholder="Skills">
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_4_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email">Overall rating</label>
+	      </div>
+	      <div class="col-sm-2">
+          		<select class="form-control" name="sel_round">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                </select>
+          </div>
+	      <div class="col-sm-4">
+	          <input type="text" class="form-control" id="skill_4_re" placeholder="Remark">
+	      </div>
+	    </div>
+        
+        <div class="form-group">
+	      <div class="col-sm-6">
+	          <label class="text-left col-sm-12" for="email">Recommendation</label>
+	      </div>
+	      <div class="col-sm-2">
+	          <input type="radio" class="radio-inline" id="rating_radio"/><label> &nbsp;Selected</label>
+	      </div>
+          <div class="col-sm-2">
+	         <input type="radio" class="radio-inline" id="rating_radio"/><label> &nbsp;Rejected</label>
+	      </div>
+	      <div class="col-sm-2">
+	          <input type="radio" class="radio-inline" id="rating_radio"/><label> &nbsp;On Hold</label>
+	      </div>
+	    </div>
+        
+	    <div class="form-group">
+	      <div class="col-sm-offset-6 col-sm-6">
+	        <button type="submit" class="btn btn-default">Submit</button>
+	      </div>
+	    </div>
+	  </form>
 </div>
 </body>
 </html>
