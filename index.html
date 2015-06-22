@@ -8,11 +8,18 @@
 
 <link rel="stylesheet" href="foundation-5.5.2/css/foundation.css" />
 <script src="foundation-5.5.2/js/vendor/modernizr.js"></script>
+<script src="foundation-5.5.2/js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.abide.js"></script>
+<!-- Other JS plugins can be included here -->
+
+<script>
+$(document).foundation();
+</script>
 </head>
 
 <body>
 <div class="large-12">
-<form>
+<form data-abide>
      		<div class="row">
             	<div class="large-9 columns">
                 	<img src="image/logo_s.png"  class="img-responsive"/>
@@ -30,14 +37,17 @@
       		 <hr> 
               <div class="row">
                 <div class="large-12 columns">
-                  <div class="row">
-                    <div class="large-2 columns">
-                      <label for="right-label" class="left inline">Candidate name</label>
-                    </div>
-                    <div class="large-10 columns">
-                      <input type="text" id="c_name" placeholder="Enter candidate name" />
-                    </div>
-                  </div>
+                      <div class="row">
+                        <div class="large-2 columns">
+                          <label for="right-label" class="left inline">Candidate name</label>
+                        </div>
+                        <div class="large-10 columns">
+                          <input type="text" id="c_name" placeholder="Enter candidate name" required pattern="[a-zA-Z]+"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                      	
+                      </div> 
                 </div>
               </div>
               
