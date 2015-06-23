@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font: Verdana;
+	font-size: 16px;	
+}
+.u1{width:100%;}
+.u2{width: 98%;}
+.u3{width: 70%; height: 100%;}
+.u4{width: 63.3%}
+.u5{width: 50%;}
+.u6{width: 48%;}
+.u7{width: 33.3%;}
+.u8{width: 30%;}
+
+input[type=text]{
+	width: 99.8%;
+	height: 100%;
+	border:none;
+	color: #ff0000;
+}
+input[type=submit]{
+	padding: 2% 5%;
+	font-size: 18px;	
+}
+select{
+	width: 50%;
+	height: 98%;
+	margin: 0 auto;
+	clear: both !important;
+}
+
+ul{
+	height: 100%;
+	background: #DBD8D8;
+}
+ul li {
+	position: relative;
+	display: inline;
+	
+}
+
+.date_s{
+	border: none;
+	font-size:16px;
+	color: #C40B0E;
+}
+
+table{
+	width:90%;
+	margin:0 auto;
+	clear: both !important;
+	border: 1px solid #000;
+}
+table tr td {
+	width: 48%;
+	height: 35px;
+	padding: 0.3% 1%;
+}
+
+.float_left{
+	float: left;
+	text-align: center;
+}
+
+.submit{
+	width:10%;
+	clear:both !important;
+	padding: 2%;
+	float: right;
+}
