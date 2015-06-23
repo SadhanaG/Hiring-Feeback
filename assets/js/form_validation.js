@@ -2,6 +2,9 @@ $(document).ready(function(){
 	
 		$('#contact-form').validate({
 	    rules: {
+		  txt_date: {
+	      required: true
+	      },
 	      c_name: {
 	        minlength: 2,
 	        required: true
