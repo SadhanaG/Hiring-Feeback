@@ -47,6 +47,35 @@ app.post("/data",function(req, res){
   var rate = req.body.rate;
   var overAllRemark = req.body.overAll_remark;
   var rRadio = req.body.r_radio;
+
+  var sendValues =  '                                                   Date:  '+ cDate + '\n'+ '\n' +
+                    '                         Interview Assessment Sheet                     '+ '\n' +'\n' +
+
+                    'Candidate Name            :     ' + cName + '\n' +
+                    'Position appiled for      :     ' + cPosition + '\n' +
+                    'Technical Skill           :     ' + cTechSkill + '\n' +
+                    'Round                     :     ' + round + '     ' + 'Remark      :     ' + roundText + '\n'+
+                    'Panel                     :     ' + panel + '     ' + 'Remark      :     ' + panelText + '\n'+
+                    '------------------------------------------------------------------------'+ '\n' +
+                    'Assessment Parameters' + '\n' +
+                    '------------------------------------------------------------------------'+ '\n' +
+                    'Communication Skills      :     ' + comSkill + '      ' + comSkillText + '\n' +
+                    'Interpersonal Skills      :     ' + intSkill + '      ' + intSkillText + '\n' +
+                    'Leadership Skills         :     ' + leadSkill + '     ' + leadSkillText + '\n' +
+                    'Team Management           :     ' + teamMang  + '     ' + teamMangText + '\n' +
+                    '-------------------------------------------------------------------------'+ '\n' +
+                    'Technical Skills' + '\n' +
+                    '-------------------------------------------------------------------------'+ '\n' +
+                    +'1. '+ techOneText +    '        ' + techOne +  '        '  + techOneRemark + '\n' +
+                    +'2. '+ techTwoText +    '        '  + techTwo +  '        '  + techTwoRemark + '\n' +
+                    +'3. '+ techThreeText +  '        '  + techThree +  '        '  + techTwoRemark + '\n' +
+                    +'4. '+ techFourText +   '        '  + techFour +  '          '  + techFourRemark + '\n' +
+                    '-------------------------------------------------------------------------'+ '\n' +
+                    'Overall Rating          :    ' + rate +  '       '  + overAllRemark + '\n' +
+                    '-------------------------------------------------------------------------'+ '\n' +
+                    'Recommendation                  Round II	              ' + rRadio + '\n' +
+                    '-------------------------------------------------------------------------' + '\n' ;
+
   });
 //Start the server
 var server = app.listen(8080, function () {
