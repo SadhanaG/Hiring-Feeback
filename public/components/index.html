@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hiring Feedback</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta class="foundation-mq-small">
+<meta class="foundation-mq-medium">
+<meta class="foundation-mq-large">
+<meta class="foundation-mq-xlarge">
+<meta class="foundation-mq-xxlarge">
+<link rel="stylesheet" href="assets/foundation-5.5.2/css/foundation.css" />
+<script src="assets/foundation-5.5.2/js/vendor/modernizr.js"></script>
+
+<!-- Other JS plugins can be included here -->
+
+</head>
+
+<body>
+<div class="large-12">
+<form class="abide-form" data-abide id="myform">
+    <div class="row">
+        <div class="large-9 columns">
+            <img src="assets/image/logo_s.png"  class="img-responsive"/>
+        </div>
+        <div class="large-3 columns">
+            <div class="large-12 row" >
+                <label for="left-label"><h5>Interview Assessment Sheets</h5></label>
+            </div>
+            <div class="large-12 row">
+                <input type="date" id="int_date" />
+            </div>
+         </div>
+      </div>
+
+     <hr>
+      <div class="row">
+        <div class="large-12 columns">
+              <div class="row">
+                <div class="large-2 columns">
+                   <label for="right-label" class="left inline">Candidate name</label>
+                </div>
+                <div class="large-10 columns error">
+                  <input type="text" id="c_name" placeholder="Enter candidate name" pattern="alpha" required="" data-valid="">
+                  <small class="error">What's the candidate name?</small>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Position appiled for</label>
+            </div>
+            <div class="large-10 columns error">
+              <input type="text" id="c_position" placeholder="Enter positoin appiled for" pattern="alpha" required="" data-invalid="">
+              <small class="error">Which post is appiled here?</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Technology/ Skill set</label>
+            </div>
+            <div class="large-10 columns error">
+              <input type="text" id="c_tech_set" placeholder="Enter technology/skill set" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Write technology or skill set...</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Round</label>
+            </div>
+            <div class="large-5 columns">
+              <select name="sel_round">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-5 columns error">
+              <input type="text" id="txt_round_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Panel</label>
+            </div>
+            <div class="large-5 columns">
+              <select name="sel_panel">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-5 columns error">
+              <input type="text" id="txt_panel_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-12 row text-center">
+        <label for="center-label"><h5>Assessment Skills</h5></label>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Communication Skills</label>
+            </div>
+            <div class="large-5 columns">
+              <select name="sel_com_skill">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-5 columns error">
+              <input type="text" id="txt_com_skill_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Interpersonal Skills</label>
+            </div>
+            <div class="large-5 columns">
+              <select name="sel_int_skill">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-5 columns error">
+              <input type="text" id="txt_int_skill_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Leadership Skills</label>
+            </div>
+            <div class="large-5 columns">
+              <select name="sel_lead_skill">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-5 columns error">
+              <input type="text" id="txt_lead_skill_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <label for="right-label" class="left inline">Team Management</label>
+            </div>
+            <div class="large-5 columns">
+              <select name="sel_team">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-5 columns error">
+              <input type="text" id="txt_team_remark" placeholder="Remark"  pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-12 row text-center">
+        <label for="center-label"><h5>Technical Skills</h5></label>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_one"  placeholder="Enter your's Technical Skills" pattern="alpha" required="" data-invalid=""/>
+              <small class="error">Write the technical skills...</small>
+            </div>
+            <div class="large-4 columns">
+              <select name="sel_skill_one">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-4 columns error">
+              <input type="text" id="txt_skill_one_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_two"  placeholder="Enter your's Technical Skills"/>
+            </div>
+            <div class="large-4 columns">
+              <select name="sel_skill_two">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_two_remark" placeholder="Remark" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_three"  placeholder="Enter your's Technical Skills"/>
+            </div>
+            <div class="large-4 columns">
+              <select name="sel_skill_three">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_three_remark" placeholder="Remark" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_four"  placeholder="Enter your's Technical Skills"/>
+            </div>
+            <div class="large-4 columns">
+              <select name="sel_skill_four">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-4 columns">
+              <input type="text" id="txt_skill_four_remark" placeholder="Remark" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+     <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              <label for="right-label" class="left inline">Overall rating</label>
+            </div>
+            <div class="large-4 columns">
+              <select name="sel_rate">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="large-4 columns error">
+              <input type="text" id="txt_overall_remark" placeholder="Remark" pattern="alpha" required="" data-invalid="">
+			  <small class="error">Give remarks to the Candidate</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+              <div class="large-6 columns">
+                    <div class="row collapse" >
+                        <div class="large-6 columns">
+                          <label>Recommendation</label>
+                        </div>
+                        <div class="large-6 columns">
+                          <span class="postfix">Round II</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-6 columns inline">
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <input type="radio" name="r_radio" value="sel" ><label for="pokemonRed">Selected</label>
+                        </div>
+                        <div class="large-4 columns">
+                            <input type="radio" name="r_radio" value="rej" ><label for="pokemonRed">Rejected</label>
+                        </div>
+                        <div class="large-4 columns">
+                            <input type="radio" name="r_radio" value="hold" ><label for="pokemonRed">On Hold</label>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+   <div class="row">
+        <div class="large-12 columns text-right">
+            <button type="submit" >Submit</button>
+        </div>
+   </div>
+</form>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/foundation-5.5.2/js/foundation/foundation.js"></script>
+<script src="assets/foundation-5.5.2/js/foundation/foundation.abide.js"></script>
+</<script src="assets/js/form_validation.js" ></script>
+
+<script>
+
+$(document).foundation();
+$(".clear").on("click",function(){
+  $("form div").removeClass("error");
+  $("form label").removeClass("error");
+  $("form")[0].reset();
+});
+/*
+$(document).foundation({
+    abide: {
+        patterns: {
+            alpha: /[a-zA-Z]+/
+        }
+    }
+});*/
+</script>
+</div>
+</body>
+</html>
