@@ -76,6 +76,26 @@ app.post("/data",function(req, res){
                     'Recommendation                  Round II	              ' + rRadio + '\n' +
                     '-------------------------------------------------------------------------' + '\n' ;
 
+        res.send('Susscessfully submit the hiring feedback form');
+        /*
+        //including the pdfkit module
+        var PDF = require('pdfkit');
+        var fs = require('fs');
+        //creating a new PDF object
+        doc = new PDF();
+        //to write the content on the file system
+        doc.pipe(fs.createWriteStream('CandidateFeedbackResult/'+cName+'_'+cPosition+'.pdf'));
+        //adding the text to be written,
+        doc.text(sendValues, 100, 100);
+        //we end the document writing.
+        doc.end(); */
+
+        //Create new file
+        fs = require('fs');
+        fs.writeFile( 'CandidateFeedbackResult/'+cName+'_'+cPosition+'.doc', sendValues , function (err) {
+          if (err) return console.log(err);
+          console.log( sendValues >cName+'_'+cPosition+'.doc');
+        });
   });
 //Start the server
 var server = app.listen(8080, function () {
