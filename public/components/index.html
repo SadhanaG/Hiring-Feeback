@@ -6,23 +6,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="assets/css/valid.css"/>
+<link rel="stylesheet" href="../css/valid.css"/>
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="assets/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
 
 <!-- jQuery library -->
-<script src="assets/bootstrap-3.3.5-dist/js/jquery.min.js"></script>
+<script src="../bootstrap-3.3.5-dist/js/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
-<script src="assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 </head>
 
 <body class="container">
-<div class="col-lg-12 panel panel-primary">  
-	<form action="" id="contact-form" class="form-horizontal">
+<div class="col-lg-12 panel panel-primary">
+	<form action="/data" method="post" id="contact-form" class="form-horizontal">
       	<div class="form-group panel-heading">
         	<div class="col-sm-6">
-	         	<img src="assets/image/logo_s.png"  class="img-responsive"/>
+	         	<img src="../image/logo_s.png"  class="img-responsive"/>
             </div>
             <div class="col-sm-6">
             	<br><br><br>
@@ -42,10 +42,10 @@
             </div>
 	   </div>
        	<hr>
-	<div class="panel-body">   
+	<div class="panel-body">
         <div class="form-group">
 	      <div class="col-sm-3">
-	          <label class="text-left col-sm-12" for="c_position"><strong>Candidate name</strong></label>
+	          <label class="text-left col-sm-12" for="c_name"><strong>Candidate name</strong></label>
 	      </div>
 	      <div class="col-sm-9">
 	        <input type="text" class="form-control name="c_name" id="c_name" placeholder="Enter candidate name">
@@ -60,23 +60,24 @@
 	        <input type="text" class="form-control" name="c_position" id="c_position" placeholder="Enter position appiled for" />
 	      </div>
 	    </div>
-        
+
 		<div class="form-group">
 	      <div class="col-sm-3">
-	          <label class="text-left col-sm-12" for="c_tech_set"><strong>Technology/ Skill set</strong></label>
+	          <label class="text-left col-sm-12" for="c_tech_skill"><strong>Technology/ Skill set</strong></label>
 	      </div>
 	      <div class="col-sm-9">
-	          <input type="text" class="form-control" name="c_tech_set" id="c_tech_set" placeholder="Enter technology/skill set" />
+	          <input type="text" class="form-control" name="c_tech_skill" id="c_tech_skill" placeholder="Enter technology/skill set" />
 	      </div>
 	    </div>
-        
+
 	    <div class="form-group">
 	      <div class="col-sm-3">
-	          <label class="text-left col-sm-12" for="sel_round"><strong>Round</strong></label>
+	          <label class="text-left col-sm-12" for="round"><strong>Round</strong></label>
 	      </div>
           <div class="col-sm-2">
-          		<select class="form-control" name="sel_round" id="sel_round">
-                        <option>1</option>
+          		<select class="form-control" name="round" id="round">
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -87,14 +88,15 @@
 	          <input type="text" class="form-control" name="txt_round" id="txt_round" placeholder="Remark" />
 	      </div>
 	    </div>
-        
+
 		<div class="form-group">
 	      <div class="col-sm-3">
 	          <label class="text-left col-sm-12"><strong>Panel</strong></label>
 	      </div>
 	      <div class="col-sm-2">
-          		<select class="form-control" name="sel_panel" id="sel_panel">
-                        <option>1</option>
+          		<select class="form-control" name="panel" id="panel">
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -105,7 +107,7 @@
           	<input type="text" class="form-control" name="txt_panel" id="txt_panel" placeholder="Remark" />
 	      </div>
 	    </div>
-        
+
         <div class="form-group text-center">
             <div class="col-sm-3">
                 <label class="text-left col-sm-12"><strong>Assessment Parameters</strong></label>
@@ -117,14 +119,15 @@
                   <label class="text-left col-sm-12" ><strong>Remarks</strong></label>
              </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-3">
 	          <label class="text-left col-sm-12"><strong>Communication Skills</strong></label>
 	      </div>
 	      <div class="col-sm-2">
-          		<select class="form-control" name="sel_com_skill" id="sel_com_skill">
-                        <option>1</option>
+          		<select class="form-control" name="com_skill" id="com_skill">
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -135,14 +138,15 @@
 	          <input type="text" class="form-control" id="txt_com_skill" name="txt_com_skill" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-3">
 	          <label class="text-left col-sm-12"><strong>Interpersonal Skills</strong></label>
 	      </div>
 	      <div class="col-sm-2">
-          		<select class="form-control" name="sel_int_skill" id="sel_int_skill">
-                        <option>1</option>
+          		<select class="form-control" name="int_skill" id="int_skill">
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -153,14 +157,15 @@
 	          <input type="text" class="form-control" id="txt_int_skill" name="txt_int_skill" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-3">
 	          <label class="text-left col-sm-12"><strong>Leadership Skills</strong></label>
 	      </div>
 	      <div class="col-sm-2">
-          		<select class="form-control" name="sel_lead_skill"  id="sel_lead_skill">
-                        <option>1</option>
+          		<select class="form-control" name="lead_skill"  id="lead_skill">
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -171,14 +176,15 @@
 	          <input type="text" class="form-control" id="txt_lead_skill" name="txt_lead_skill" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-3">
 	          <label class="text-left col-sm-12"><strong>Team Management</strong></label>
 	      </div>
 	      <div class="col-sm-2">
-          		<select class="form-control" name="sel_team" id="sel_team">
-                        <option>1</option>
+          		<select class="form-control" name="team_mang" id="team_mang">
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -186,22 +192,62 @@
                 </select>
           </div>
 	      <div class="col-sm-7">
-	          <input type="text" class="form-control" id="txt_team" name="txt_team_skill" placeholder="Remark">
+	          <input type="text" class="form-control" id="txt_team_mang" name="txt_team_mang" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
+
+			<div class="form-group">
+			<div class="col-sm-3">
+					<label class="text-left col-sm-12"><strong>Aptitude Skills</strong></label>
+			</div>
+			<div class="col-sm-2">
+						<select class="form-control" name="apti_skill" id="apti_skill">
+											<option></option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+							</select>
+				</div>
+			<div class="col-sm-7">
+					<input type="text" class="form-control" id="txt_apti_skill" name="txt_apti_skill" placeholder="Remark">
+			</div>
+		</div>
+
+		<div class="form-group">
+		<div class="col-sm-3">
+				<label class="text-left col-sm-12"><strong>Program Solving Skills</strong></label>
+		</div>
+		<div class="col-sm-2">
+					<select class="form-control" name="pro_skill" id="pro_skill">
+										<option></option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+						</select>
+			</div>
+		<div class="col-sm-7">
+				<input type="text" class="form-control" id="txt_pro_skill" name="txt_pro_skill" placeholder="Remark">
+		</div>
+	</div>
+
 	    <div class="form-group text-center">
         	<label class="text-center col-sm-12"><strong>Technical Skills</strong></label>
         </div>
-        
-        
+
+
 		<div class="form-group">
 	      <div class="col-sm-5">
 	          <input type="text" class="form-control" name="skill_one" id="skill_one" placeholder="Skills 1">
 	      </div>
 	      <div class="col-sm-2">
           		<select class="form-control" name="sel_skill_one" id="sel_skill_one">
-                        <option>1</option>
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -212,14 +258,15 @@
 	          <input type="text" class="form-control" id="txt_skill_one" name="txt_skill_one" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-5">
 	          <input type="text" class="form-control" name="skill_two"  id="skill_two" placeholder="Skills 2">
 	      </div>
 	      <div class="col-sm-2">
           		<select class="form-control" name="sel_skill_two" id="sel_skill_two" >
-                        <option>1</option>
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -230,14 +277,15 @@
 	          <input type="text" class="form-control" id="txt_skill_two" name="txt_skill_two" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-5">
 	          <input type="text" class="form-control" name="skill_three" id="skill_three" placeholder="Skills">
 	      </div>
 	      <div class="col-sm-2">
           		<select class="form-control" name="sel_skill_three" id="sel_skill_three">
-                        <option>1</option>
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -248,14 +296,15 @@
 	          <input type="text" class="form-control" id="txt_skill_three"  name="txt_skill_three" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-5">
 	          <input type="text" class="form-control" name="skill_four" id="skill_four" placeholder="Skills">
 	      </div>
 	      <div class="col-sm-2">
           		<select class="form-control" name="sel_skill_four" id="sel_skill_four">
-                        <option>1</option>
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -266,14 +315,15 @@
 	          <input type="text" class="form-control" id="txt_skill_four"  name="txt_skill_four" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-6">
 	          <label class="text-left col-sm-12">Overall rating</label>
 	      </div>
 	      <div class="col-sm-2">
           		<select class="form-control" name="sel_rate" id="sel_rate">
-                        <option>1</option>
+                        <option></option>
+												<option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -284,30 +334,30 @@
 	          <input type="text" class="form-control" id="txt_rate"  name="txt_rate" placeholder="Remark">
 	      </div>
 	    </div>
-        
+
         <div class="form-group">
 	      <div class="col-sm-6">
 	          <label class="text-left col-sm-12">Recommendation</label>
 	      </div>
 	      <div class="col-sm-2">
-	          <input type="radio" class="radio-inline" name="rating_radio" id="rating_radio"/><label> &nbsp;Selected</label>
+	          <input type="radio" class="radio-inline" value="Selected" name="rating_radio" id="rating_radio"/><label> &nbsp;Selected</label>
 	      </div>
           <div class="col-sm-2">
-	         <input type="radio" class="radio-inline" name="rating_radio" id="rating_radio"/><label> &nbsp;Rejected</label>
+	         <input type="radio" class="radio-inline" value="Rejected" name="rating_radio" id="rating_radio"/><label> &nbsp;Rejected</label>
 	      </div>
 	      <div class="col-sm-2">
-	          <input type="radio" class="radio-inline" name="rating_radio" id="rating_radio"/><label> &nbsp;On Hold</label>
+	          <input type="radio" class="radio-inline" value="On Hold" name="rating_radio" id="rating_radio"/><label> &nbsp;On Hold</label>
 	      </div>
 	    </div>
         <hr>
 	    <div class="form-group">
 	      <div class="col-sm-12 text-right">
-	        <button type="submit" class="btn btn-primary">Submit</button>
+	        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
 	      </div>
 	    </div>
  	</div><!-- Panel body end -->
 	</form>
- </div><!--  Panel end -->  
+ </div><!--  Panel end -->
  <!-- Bootstrap JS -->
 	  <script src="assets/bootstrap-3.3.5-dist/js/jquery-1.7.1.min.js"></script>
 
