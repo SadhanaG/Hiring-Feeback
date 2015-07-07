@@ -32,9 +32,11 @@ app.post("/data",function(req, res){
   var leadSkillText = req.body.txt_lead_skill;
   var teamMang = req.body.team_mang;
   var teamMangText = req.body.txt_team_mang;
-  var aptiSkill = req.body.apti_skil;
+  var logicSkill = req.body.logic_skill;
+  var logicSkillText = req.body.txt_logic_skill;
+  var aptiSkill = req.body.apti_skill;
   var aptiSkillText = req.body.txt_apti_skill;
-  var proSkill = req.body.pro_Skill;
+  var proSkill = req.body.pro_skill;
   var proSkillText = req.body.txt_pro_skill;
   var techOneText = req.body.skill_one;
   var techOne = req.body.sel_skill_one;
@@ -55,19 +57,20 @@ app.post("/data",function(req, res){
   var sendValues =  '                                                   Date:  '+ cDate + '\n'+ '\n' +
                     '                         Interview Assessment Sheet                     '+ '\n' +'\n' +
 
-                    'Candidate Name            :     ' + cName + '\n' +
-                    'Position appiled for      :     ' + cPosition + '\n' +
-                    'Technical Skill           :     ' + cTechSkill + '\n' +
-                    'Round                     :     ' + round + '     ' + 'Remark      :     ' + roundText + '\n'+
-                    'Panel                     :     ' + panel + '     ' + 'Remark      :     ' + panelText + '\n'+
+                    'Candidate Name                 :     ' + cName + '\n' +
+                    'Position appiled for           :     ' + cPosition + '\n' +
+                    'Technical Skill                :     ' + cTechSkill + '\n' +
+                    'Round                          :     ' + round + '     ' + 'Remark      :     ' + roundText + '\n'+
+                    'Panel                          :     ' + panel + '     ' + 'Remark      :     ' + panelText + '\n'+
                     '------------------------------------------------------------------------'+ '\n' +
                     'Assessment Parameters' + '\n' +
                     '------------------------------------------------------------------------'+ '\n' +
-                    'Communication Skills      :     ' + comSkill + '      ' + comSkillText + '\n' +
-                    'Interpersonal Skills      :     ' + intSkill + '      ' + intSkillText + '\n' +
-                    'Leadership Skills         :     ' + leadSkill + '     ' + leadSkillText + '\n' +
-                    'Team Management           :     ' + teamMang  + '     ' + teamMangText + '\n' +
-                    'Aptitude Skills           :     ' + aptiSkill  + '     ' + aptiSkillText + '\n' +
+                    'Communication Skills           :     ' + comSkill + '      ' + comSkillText + '\n' +
+                    'Interpersonal Skills           :     ' + intSkill + '      ' + intSkillText + '\n' +
+                    'Leadership Skills              :     ' + leadSkill + '     ' + leadSkillText + '\n' +
+                    'Team Management                :     ' + teamMang  + '     ' + teamMangText + '\n' +
+                    'Logic and Reasonin Skills      :     ' + logicSkill  + '     ' + logicSkillText + '\n' +
+                    'Attitude/Aptitude and Culture  :     ' + aptiSkill  + '     ' + aptiSkillText + '\n' +
                     'Program Solving Skills    :     ' + proSkill  + '     ' + proSkillText + '\n' +
                     '-------------------------------------------------------------------------'+ '\n' +
                     'Technical Skills' + '\n' +
@@ -82,7 +85,33 @@ app.post("/data",function(req, res){
                     'Recommendation                  Round II	              ' + rRadio + '\n' +
                     '-------------------------------------------------------------------------' + '\n' ;
 
-        res.send('Susscessfully submit the hiring feedback form');
+        var dataSubmit = "<table width='70%' cellpadding='5px' style='background-color:#f4f4f4; border:1px solid #000; margin:auto;'>"+
+                        "<tr>"+"<td colspan='12'>"+ "Date: " +  cDate +  "</td>" + "</tr>"+ "<br>"+
+                        "<tr>"+"<td colspan='12'>"+ "<b>"+"Interview Assessment Sheet"+ "</b>" +"</td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Candidate Name"+"</td>"+"<td colspan='8'>"+cName+"/<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Position appiled for"+"</td>"+"<td colspan='8'>"+cPosition+"/<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Technical Skill"+"</td>"+"<td colspan='8'>"+cTechSkill+"</td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Round"+"</td>"+"<td colspan='4'>"+round+"</td>"+"<td colspan='4'>"+roundText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Panel"+"</td>"+"<td colspan='4'>"+panel+"</td>"+"<td colspan='4'>"+panelText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='12'>"+"<b>"+"Assessment Parameters"+"</b>"+"</td>"+"<tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Communication Skills"+"</td>"+"<td colspan='4'>"+comSkill+"</td>"+"<td colspan='4'>"+comSkillText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Interpersonal Skills"+"</td>"+"<td colspan='4'>"+intSkill+"</td>"+"<td colspan='4'>"+intSkillText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Leadership Skills"+"</td>"+"<td colspan='4'>"+leadSkill+"</td>"+"<td colspan='4'>"+leadSkillText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Team Management"+"</td>"+"<td colspan='4'>"+teamMang+"</td>"+"<td colspan='4'>"+teamMangText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Logic and Reasonind Skills"+"</td>"+"<td colspan='4'>"+logicSkill+"</td>"+"<td colspan='4'>"+logicSkillText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Attitude/Aptitude and Culture"+"</td>"+"<td colspan='4'>"+aptiSkill+"</td>"+"<td colspan='4'>"+aptiSkillText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Program Solving Skills"+"</td>"+"<td colspan='4'>"+proSkill+"</td>"+"<td colspan='4'>"+proSkillText+"<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='12'>"+"<b>"+"Technical Skills"+"</b>"+"</td>"+"<tr>"+
+                        "<tr>"+"<td colspan='4'>"+"1. "+ techOneText +"</td>"+"<td colspan='4'>"+techOne +"</td>"+"<td colspan='4'>"+techOneRemark +"</td>"+"</tr>"+
+                        "<tr>"+"<td colspan='4'>"+"2. "+ techTwoText +"</td>"+"<td colspan='4'>"+techTwo +"</td>"+"<td colspan='4'>"+techTwoRemark +"</td>"+"</tr>"+
+                        "<tr>"+"<td colspan='4'>"+"3. "+ techThreeText +"</td>"+"<td colspan='4'>"+techThree +"</td>"+"<td colspan='4'>"+techThreeRemark +"</td>"+"</tr>"+
+                        "<tr>"+"<td colspan='4'>"+"4. "+ techFourText +"</td>"+"<td colspan='4'>"+techFour +"</td>"+"<td colspan='4'>"+techFourRemark +"</td>"+"</tr>"+
+                        "<tr>"+"<td colspan='4'>"+"1. "+ "Overall Rating" +"</td>"+"<td colspan='4'>"+rate +"</td>"+"<td colspan='4'>"+overAllRemark +"</td>"+"</tr>"+
+                        "<tr>"+"<td colspan='4'>"+"1. "+ "Recommendation" +"</td>"+"<td colspan='4'>"+"Round II" +"</td>"+"<td colspan='4'>"+rRadio +"</td>"+"</tr>"+
+                        "</table>";
+        res.send(dataSubmit);
+        
+
         /*
         //including the pdfkit module
         var PDF = require('pdfkit');
@@ -103,6 +132,8 @@ app.post("/data",function(req, res){
           console.log( sendValues >cName+'_'+cPosition+'.doc');
         });
   });
+
+
 //Start the server
 var server = app.listen(8080, function () {
   var host = server.address().address;
