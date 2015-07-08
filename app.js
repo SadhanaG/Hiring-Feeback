@@ -85,11 +85,13 @@ app.post("/data",function(req, res){
                     'Recommendation                  Round II	              ' + rRadio + '\n' +
                     '-------------------------------------------------------------------------' + '\n' ;
 
-        var dataSubmit = "<table width='70%' cellpadding='5px' style='background-color:#f4f4f4; border:1px solid #000; margin:auto;'>"+
+        var dataSubmit ="<div style='width:70%; margin:auto;'>"+
+                        "<form action='/pdfGenerate'>"+
+                        "<table width='100%' cellpadding='5px' style='background-color:#f4f4f4; border:1px solid #000;'>"+
                         "<tr>"+"<td colspan='12'>"+ "Date: " +  cDate +  "</td>" + "</tr>"+ "<br>"+
                         "<tr>"+"<td colspan='12'>"+ "<b>"+"Interview Assessment Sheet"+ "</b>" +"</td>"+"</tr>"+
-                        "<tr>"+ "<td colspan='4'>"+"Candidate Name"+"</td>"+"<td colspan='8'>"+cName+"/<td>"+"</tr>"+
-                        "<tr>"+ "<td colspan='4'>"+"Position appiled for"+"</td>"+"<td colspan='8'>"+cPosition+"/<td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Candidate Name"+"</td>"+"<td colspan='8'>"+cName+"</td>"+"</tr>"+
+                        "<tr>"+ "<td colspan='4'>"+"Position appiled for"+"</td>"+"<td colspan='8'>"+cPosition+"</td>"+"</tr>"+
                         "<tr>"+ "<td colspan='4'>"+"Technical Skill"+"</td>"+"<td colspan='8'>"+cTechSkill+"</td>"+"</tr>"+
                         "<tr>"+ "<td colspan='4'>"+"Round"+"</td>"+"<td colspan='4'>"+round+"</td>"+"<td colspan='4'>"+roundText+"<td>"+"</tr>"+
                         "<tr>"+ "<td colspan='4'>"+"Panel"+"</td>"+"<td colspan='4'>"+panel+"</td>"+"<td colspan='4'>"+panelText+"<td>"+"</tr>"+
@@ -108,10 +110,19 @@ app.post("/data",function(req, res){
                         "<tr>"+"<td colspan='4'>"+"4. "+ techFourText +"</td>"+"<td colspan='4'>"+techFour +"</td>"+"<td colspan='4'>"+techFourRemark +"</td>"+"</tr>"+
                         "<tr>"+"<td colspan='4'>"+"1. "+ "Overall Rating" +"</td>"+"<td colspan='4'>"+rate +"</td>"+"<td colspan='4'>"+overAllRemark +"</td>"+"</tr>"+
                         "<tr>"+"<td colspan='4'>"+"1. "+ "Recommendation" +"</td>"+"<td colspan='4'>"+"Round II" +"</td>"+"<td colspan='4'>"+rRadio +"</td>"+"</tr>"+
-                        "</table>";
+                        "</table>"+"<br><br>"+
+                        "<label><h4>Generate the form into .doc file            </label><input type='submit' value='Submit' style='right:10px;'></h4>"+"</form>"+"</div>"+"<br><br>";
         res.send(dataSubmit);
-        
 
+        app.get('/pdfGenerate', function(req, res){
+            res.send(cName + ' - Interview Assessment Result Generated');
+            //Create new file
+            fs = require('fs');
+            fs.writeFile( 'CandidateFeedbackResult/'+cName+'_'+cPosition+'.doc', sendValues , function (err) {
+              if (err) return console.log(err);
+              console.log( sendValues >cName+'_'+cPosition+'.doc');
+            });
+        });
         /*
         //including the pdfkit module
         var PDF = require('pdfkit');
@@ -124,13 +135,6 @@ app.post("/data",function(req, res){
         doc.text(sendValues, 100, 100);
         //we end the document writing.
         doc.end(); */
-
-        //Create new file
-        fs = require('fs');
-        fs.writeFile( 'CandidateFeedbackResult/'+cName+'_'+cPosition+'.doc', sendValues , function (err) {
-          if (err) return console.log(err);
-          console.log( sendValues >cName+'_'+cPosition+'.doc');
-        });
   });
 
 
