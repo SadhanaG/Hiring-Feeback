@@ -5,6 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 //Configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded( {extended: false}));
+var nodeMailer = require('nodemailer');
 
 app.use(express.static(__dirname + '/public/components'));
 app.use(express.static(__dirname + '/public/assets/'));
